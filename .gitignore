@@ -1,0 +1,58 @@
+# Byte-compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Django migrations
+*/migrations/*.pyc
+*/migrations/*.py
+*/migrations/__pycache__/
+
+# Environment variables
+.env
+
+# Database files
+*.sqlite3
+
+# Media files (if any)
+media/
+
+# Static files (if any)
+staticfiles/
+
+# Ignore all node_modules
+node_modules/
+
+# Virtual environment folder
+venv/
+.env/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS specific files
+.DS_Store
+
+# Log files
+*.log
+
+# Coverage reports
+htmlcov/
+.coverage
+*.cover
+
+# Docker
+docker-compose.yml
+*.env
+
+# Python packages
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Git itself
+.git/
