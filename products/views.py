@@ -5,7 +5,7 @@ from .models import Product
 from .forms import ProductSearchForm
 
 
-def index(request):
+def product(request):
     form = ProductSearchForm(request.GET or None)
     products = Product.objects.all()
 
@@ -20,8 +20,11 @@ def index(request):
                 # If query is not a number, search only by name
                 products = products.filter(name__icontains=query)
 
-    return render(request, 'index.html', {'form': form, 'products': products})
+    return render(request, 'product.html', {'form': form, 'products': products})
 
 
-def new(request):
-    return HttpResponse('Create new Product')
+
+
+
+
+
