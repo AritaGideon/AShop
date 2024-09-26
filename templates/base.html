@@ -40,10 +40,13 @@
           <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
         </li>
       </ul>
-            <form method="get">
+      <!--<form method="get">
           <label>Search:</label>
           {{ form.query }}
           <button type="submit">Search</button>
+      </form> -->
+      <form class="d-flex" role="search" method="get" action="{% url 'products home' %}"> {{ form.query }}
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </div>
