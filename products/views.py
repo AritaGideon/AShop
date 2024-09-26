@@ -6,8 +6,10 @@ from .forms import ProductSearchForm
 
 
 def product(request):
+    global query
     form = ProductSearchForm(request.GET or None)
     products = Product.objects.all()
+    message = None
 
     if form.is_valid():
         query = form.cleaned_data.get('query')
@@ -20,7 +22,15 @@ def product(request):
                 # If query is not a number, search only by name
                 products = products.filter(name__icontains=query)
 
-    return render(request, 'product.html', {'form': form, 'products': products})
+                #If no product is found show "Product not available" message
+            if not products.exists():
+                message = 'Product not available'
+        else:
+            message = 'Please enter a valid product name or price'
+    else:
+        message = 'Invalid input. Please try again.'
+
+    return render(request, 'product.html', {'form': form, 'products': products, 'message': message})
 
 
 
