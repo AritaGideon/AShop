@@ -5,18 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ashop</title>
     {% load static %}
-
     <!--<link rel="stylesheet" href="{% static 'home/css/styles.css' %}">-->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">
-      <img src="{% static 'home/images/logo.png' %}" alt="Logo" style="height: 50px; width: auto;"> Home </a>
+  <div class="top-pane">
+    <a class="logo" href="{% url 'home' %}">
+      <img src="{% static 'home/images/logo.png' %}" alt="Logo" style="height: 50px; width: 100px;"></a>
+    <div class="search-container">
+      <form class="search-form" role="search" method="get" action="{% url 'products home' %}">
+        <input type="text" name="query" placeholder="Search..." class="search-input">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
@@ -45,18 +51,16 @@
           {{ form.query }}
           <button type="submit">Search</button>
       </form> -->
-      <form class="d-flex" role="search" method="get" action="{% url 'products home' %}"> {{ form.query }}
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
-  </div>
-</nav>
-{% block content %}
-{% endblock %}
+    </nav>
+  <!--</div>-->
+  {% block content %}
+  {% endblock %}
 
-<!-- Bootstrap JS, Popper.js, and jQuery -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+</div>
 </body>
 </html>

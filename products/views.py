@@ -22,7 +22,7 @@ def product(request):
                 # If query is not a number, search only by name
                 products = products.filter(name__icontains=query)
 
-                #If no product is found show "Product not available" message
+                # If no product is found show "Product not available" message
             if not products.exists():
                 message = 'Product not available'
         else:
@@ -31,10 +31,3 @@ def product(request):
         message = 'Invalid input. Please try again.'
 
     return render(request, 'product.html', {'form': form, 'products': products, 'message': message})
-
-
-
-
-
-
-
