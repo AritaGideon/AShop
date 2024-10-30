@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ashop"
+version = "0.1.0"
+description = "A small webshop for small businesses selling groceries."
+authors = ["AritaGideon <orinagideon@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.1.2"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.29.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,40 @@
+/* Styling for the top pane */
+.top-pane {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+/* Search container styling */
+.search-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Styling for the search form */
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 500px
+    flex-grow: 1;
+    max-width: 900px; /* Optional: adjust the maximum width of the search form */
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    margin-right: 8px; /* Space between input and button */
+}
