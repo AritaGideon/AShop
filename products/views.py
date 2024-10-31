@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.db.models import Q
 from django.shortcuts import render
-from .models import Product
+from .models import Product, Categories
 from .forms import ProductSearchForm
 
 
@@ -31,3 +31,5 @@ def product(request):
         message = 'Invalid input. Please try again.'
 
     return render(request, 'product.html', {'form': form, 'products': products, 'message': message})
+
+
