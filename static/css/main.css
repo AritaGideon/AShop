@@ -26,11 +26,11 @@
     align-items: center;
     margin-right: 500px
     flex-grow: 1;
-    max-width: 900px; /* Optional: adjust the maximum width of the search form */
+    max-width: 300px; /* Optional: adjust the maximum width of the search form */
 }
 
 .search-input {
-    flex-grow: 1;
+    flex-grow: 10;
     padding: 8px 12px;
     border-radius: 20px;
     border: 1px solid #ccc;
